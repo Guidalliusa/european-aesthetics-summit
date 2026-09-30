@@ -30,6 +30,6 @@ export const partners: Partner[] = [
     logoHeight: 225,
     caption: "The BE System · Global",
   },
-  // Original com fundo claro e texto preto: passado a marfim (como a LifeWave) para ler sobre o preto.
+  // Romã nas cores originais; só o texto (preto no original) passa a marfim para ler sobre o fundo escuro.
   { name: "Grupo Cado", logo: "/logos/grupo-cado.png", logoWidth: 700, logoHeight: 414 },
 ];
