@@ -59,7 +59,7 @@ export default function Manifesto() {
               <div
                 key={f.label}
                 style={{ ["--i" as string]: i }}
-                className={`group flex border-b border-bronze/25 py-7 sm:border-b-0 sm:py-10 sm:[&:not(:first-child)]:border-l sm:[&:not(:first-child)]:border-bronze/35 sm:[&:not(:first-child)]:pl-6 sm:[&:not(:last-child)]:pr-4 xl:[&:not(:first-child)]:pl-10 xl:[&:not(:last-child)]:pr-8 ${
+                className={`group flex border-b border-bronze/25 py-7 last:border-b-0 last:pb-0 sm:border-b-0 sm:last:pb-10 sm:py-10 sm:[&:not(:first-child)]:border-l sm:[&:not(:first-child)]:border-bronze/35 sm:[&:not(:first-child)]:pl-6 sm:[&:not(:last-child)]:pr-4 xl:[&:not(:first-child)]:pl-10 xl:[&:not(:last-child)]:pr-8 ${
                   f.word ? "flex-col items-start justify-center gap-2.5" : "items-center gap-5"
                 }`}
               >
@@ -84,7 +84,7 @@ export default function Manifesto() {
         {/* Lisboa à hora dourada, com a ponte 25 de Abril ao fundo */}
         <div
           data-reveal="image"
-          className="relative h-[82vw] max-h-[560px] sm:h-[60vw] lg:h-auto lg:max-h-none"
+          className="relative hidden lg:block"
         >
           {/* A cortina da entrada atua neste invólucro; a curva fica no interior */}
           <div className="absolute inset-0">
