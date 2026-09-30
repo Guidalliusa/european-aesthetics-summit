@@ -1,0 +1,132 @@
+{
+  "raquel-guidalli": {
+    "width": 640,
+    "height": 800,
+    "widths": [
+      480,
+      640
+    ]
+  },
+  "raquel-organizadora": {
+    "width": 760,
+    "height": 950,
+    "widths": [
+      480,
+      760
+    ]
+  },
+  "belinha-cardoso": {
+    "width": 1023,
+    "height": 1279,
+    "widths": [
+      480,
+      800,
+      1023
+    ]
+  },
+  "maria-celeste-barreto": {
+    "width": 1023,
+    "height": 1279,
+    "widths": [
+      480,
+      800,
+      1023
+    ]
+  },
+  "teylon-castro": {
+    "width": 1024,
+    "height": 1280,
+    "widths": [
+      480,
+      800,
+      1024
+    ]
+  },
+  "john-feitosa": {
+    "width": 794,
+    "height": 992,
+    "widths": [
+      480,
+      794
+    ]
+  },
+  "helena-venceslau": {
+    "width": 1020,
+    "height": 1275,
+    "widths": [
+      480,
+      800,
+      1020
+    ]
+  },
+  "ale-nogueira": {
+    "width": 640,
+    "height": 800,
+    "widths": [
+      480,
+      640
+    ]
+  },
+  "patricia-benitto": {
+    "width": 560,
+    "height": 700,
+    "widths": [
+      480,
+      560
+    ]
+  },
+  "gustavo-galves": {
+    "width": 480,
+    "height": 600,
+    "widths": [
+      480
+    ]
+  },
+  "danny-gomes": {
+    "width": 1005,
+    "height": 1005,
+    "widths": [
+      240,
+      480,
+      1005
+    ]
+  },
+  "raquel-palco": {
+    "width": 585,
+    "height": 1131,
+    "widths": [
+      480,
+      585
+    ]
+  },
+  "ipdj-auditorio": {
+    "width": 1672,
+    "height": 941,
+    "widths": [
+      800,
+      1200,
+      1672
+    ]
+  },
+  "lisboa-alfama": {
+    "width": 2800,
+    "height": 1867,
+    "widths": [
+      800,
+      1200,
+      1600,
+      2400,
+      2800
+    ]
+  },
+  "lisboa-ponte": {
+    "width": 1575,
+    "height": 2100,
+    "widths": [
+      600,
+      900,
+      1200,
+      1575
+    ]
+  }
+}
