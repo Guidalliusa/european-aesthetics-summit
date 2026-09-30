@@ -135,6 +135,11 @@ for w in [480, palco.width]:
 manifest["raquel-palco"] = {"width": palco.width, "height": palco.height, "widths": made}
 print("raquel-palco", palco.size, made)
 
+# ---------- Cartaz oficial (secção do bilhete) + cópia para descarregar ----------
+cartaz = Image.open(os.path.join(SRC, "cartaz-oficial.jpg")).convert("RGB")
+save("cartaz-oficial", cartaz, [480, 800, cartaz.width], quality=84)
+cartaz.save(os.path.join(ROOT, "public", "cartaz-european-aesthetics-summit-2026.jpg"), "JPEG", quality=90, optimize=True)
+
 # ---------- Local ----------
 save("ipdj-auditorio", Image.open(os.path.join(SRC, "ipdj-auditorio.webp")).convert("RGB"), [800, 1200, 1672], quality=82)
 
