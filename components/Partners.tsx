@@ -12,7 +12,7 @@ export default function Partners() {
         <ul
           data-reveal="stagger"
           style={{ ["--step" as string]: "91ms", ["--d" as string]: "75ms" }}
-          className="mt-10 grid grid-cols-2 items-center justify-items-center gap-x-8 gap-y-10 sm:flex sm:flex-wrap sm:justify-center sm:gap-x-14 md:mt-12 lg:gap-x-20"
+          className="mt-10 grid grid-cols-2 items-center justify-items-center gap-x-8 gap-y-10 [&>li:last-child:nth-child(odd)]:col-span-2 sm:flex sm:flex-wrap sm:justify-center sm:gap-x-14 md:mt-12 lg:gap-x-20"
         >
           {partners.map((p, i) => (
             <li key={p.name} style={{ ["--i" as string]: i }} className="flex min-h-20 flex-col items-center justify-center gap-2">
