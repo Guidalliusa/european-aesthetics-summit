@@ -46,7 +46,7 @@ export default function Certification() {
               <Letters text="internacional" />
             </span>
           </h2>
-          <p data-reveal style={{ ["--d" as string]: "250ms" }} className="mt-10 max-w-md text-lg leading-relaxed text-stone">
+          <p data-reveal style={{ ["--d" as string]: "250ms" }} className="mt-10 max-w-md text-lg font-normal leading-relaxed text-stone">
             Uma experiência pensada para ampliar conexões e perspetivas além-fronteiras.
           </p>
           <div data-reveal style={{ ["--d" as string]: "325ms" }} className="mt-10 flex flex-wrap items-center gap-3">

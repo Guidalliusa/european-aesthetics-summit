@@ -13,7 +13,7 @@ export default function Topics() {
             <h2 id="temas-title" className="mt-8 font-display text-[clamp(2.1rem,4vw,3.5rem)] font-light leading-[1.08]">
               <Words delay={75} segments={["Diferentes perspetivas. ", ["Um mesmo futuro.", "italic text-bronze-deep"]]} />
             </h2>
-            <p data-reveal style={{ ["--d" as string]: "300ms" }} className="mt-8 max-w-xs text-[1.0625rem] leading-relaxed text-stone">
+            <p data-reveal style={{ ["--d" as string]: "300ms" }} className="mt-8 max-w-xs text-[1.0625rem] font-normal leading-relaxed text-stone">
               Dez eixos que atravessam o programa, da prática profissional à carreira internacional.
             </p>
           </div>

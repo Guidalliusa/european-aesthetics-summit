@@ -42,7 +42,7 @@ export default function Manifesto() {
             <p
               data-reveal
               style={{ ["--d" as string]: "325ms" }}
-              className="max-w-[25rem] border-l border-bronze/40 py-1 pl-6 text-[1.0625rem] leading-[1.75] text-stone md:ml-auto md:py-3 md:pl-10"
+              className="max-w-[25rem] border-l border-bronze/40 py-1 pl-6 text-[1.0625rem] leading-[1.75] font-normal text-stone md:ml-auto md:py-3 md:pl-10"
             >
               Um dia de conhecimento, conexões e novas perspetivas para profissionais que acompanham a evolução da
               estética, da saúde, da inovação e da carreira internacional.
