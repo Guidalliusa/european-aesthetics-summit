@@ -57,7 +57,7 @@ export default function Hero() {
 
 
       {/* Curva dourada sob a foto */}
-      <svg aria-hidden="true" viewBox="0 0 1440 900" preserveAspectRatio="none" className="pointer-events-none absolute inset-0 -z-10 h-full w-full">
+      <svg aria-hidden="true" viewBox="0 0 1440 900" preserveAspectRatio="none" className="pointer-events-none absolute inset-0 -z-10 hidden h-full w-full lg:block">
         <defs>
           <linearGradient id="arcR" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0" stopColor="#D6B06A" stopOpacity="0" />
