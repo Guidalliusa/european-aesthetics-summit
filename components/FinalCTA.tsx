@@ -45,7 +45,7 @@ export default function FinalCTA() {
           <figure className="mx-auto w-full max-w-[26rem] lg:max-w-none">
             <div
               data-reveal="image"
-              className="relative aspect-[1082/1600] overflow-hidden rounded-[20px] border border-champagne/25 bg-ink-2 shadow-[0_40px_80px_-40px_rgb(0_0_0/0.9)]"
+              className="relative aspect-[1206/1817] overflow-hidden rounded-[20px] border border-champagne/25 bg-ink-2 shadow-[0_40px_80px_-40px_rgb(0_0_0/0.9)]"
             >
               <Img
                 name="cartaz-oficial"
