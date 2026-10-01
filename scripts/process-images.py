@@ -6,8 +6,8 @@ Uso (na raiz do projeto):  python scripts/process-images.py public/images
 Fontes em assets-src/:
   fotos/     originais enviados (ipdj-auditorio.webp = auditório IPDJ, 16 = John Feitosa, 17 = Teylon Castro,
              19 = Danny Gomes, 20 = Belinha Cardoso, 22 = Maria Celeste Barreto,
-             24 = Patricia Benitto, 25 = Gustavo Galves)
-  recortes/  fundos removidos com rembg (18 = Raquel Guidalli, 21 = Helena Venceslau, 23 = Alê Nogueira)
+             25 = Gustavo Galves)
+  recortes/  fundos removidos com rembg (18 = Raquel Guidalli, 21 = Helena Venceslau)
   lisboa/    fotos Unsplash (licença Unsplash): rsB7CTYCO0Q Alfama com o sol no Tejo (hero), HsGcpxsZfBE vista com a ponte 25 de Abril
 """
 import colorsys
@@ -93,16 +93,6 @@ for y in range(1250, raq.height):
         r, g, b, a = rp[x, y]
         if a and b > r + 25:
             rp[x, y] = (r, g, b, 0)
-ale = Image.open(os.path.join(CUT, "23_u2net_human_seg.png")).convert("RGBA")
-px = ale.load()
-for y in range(170, 500):
-    for x in range(140, 262):
-        r, g, b, a = px[x, y]
-        if a == 0:
-            continue
-        hh, s, v = colorsys.rgb_to_hsv(r / 255, g / 255, b / 255)
-        if v > 0.55 and s < 0.28:
-            px[x, y] = (r, g, b, 0)
 hel = Image.open(os.path.join(CUT, "21_u2net_human_seg.png")).convert("RGBA")
 
 # ---------- Palestrantes (4:5) ----------
@@ -118,8 +108,9 @@ pad.paste(john, (0, 60))
 save("john-feitosa", pad.crop((0, 0, 794, 992)), [480, 794])
 
 save("helena-venceslau", on_backdrop(hel, (70, 20, 1090, 1295), (0.5, 0.25)), [480, 800])
-save("ale-nogueira", on_backdrop(ale, (80, 40, 720, 840), (0.5, 0.25)), [480, 640])
-save("patricia-benitto", crop45(src(24), (125, 150, 685, 850)), [480, 560])
+# Patricia: foto do cartaz individual (57), recortada (isnet) e posta no fundo escuro dos outros recortes
+pat = Image.open(os.path.join(CUT, "57_patricia_isnet.png")).convert("RGBA")
+save("patricia-benitto", on_backdrop(pat, (15, 10, 485, 597), (0.55, 0.3)), [470])
 save("gustavo-galves", crop45(src(25), (295, 180, 775, 780)), [480])
 save("danny-gomes", src(19).crop((50, 0, 1055, 1005)), [240, 480])
 

@@ -98,7 +98,7 @@ export default function Footer() {
               href={GRUPO_CADO_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-ivory/85 underline-offset-4 transition-colors duration-300 hover:text-champagne hover:underline"
+              className="text-champagne underline-offset-4 transition-colors duration-300 hover:text-ivory hover:underline"
             >
               Grupo Cado
             </a>

@@ -24,8 +24,8 @@ export default function Speakers() {
           </div>
         </div>
 
-        {/* 8 oradores em 2 filas de 4; a Raquel tem secção própria acima */}
-        <ul className="mt-16 grid grid-cols-2 gap-x-4 gap-y-12 sm:gap-x-6 md:mt-24 md:gap-x-8 md:gap-y-16 lg:grid-cols-4 lg:gap-x-[2vw] lg:gap-y-20 lg:[&>li:nth-child(even)]:translate-y-16 xl:gap-x-8">
+        {/* 7 oradores: 4 + 3 centrados no desktop (grelha de 8 com cartões de 2); a Raquel tem secção própria acima */}
+        <ul className="mt-16 grid grid-cols-2 gap-x-4 gap-y-12 sm:gap-x-6 md:mt-24 md:gap-x-8 md:gap-y-16 max-lg:[&>li:last-child:nth-child(odd)]:col-span-2 max-lg:[&>li:last-child:nth-child(odd)]:w-[calc(50%-0.5rem)] max-lg:[&>li:last-child:nth-child(odd)]:justify-self-center sm:max-lg:[&>li:last-child:nth-child(odd)]:w-[calc(50%-0.75rem)] lg:grid-cols-8 lg:gap-x-[2vw] lg:gap-y-20 lg:[&>li]:col-span-2 lg:[&>li:nth-child(5)]:col-start-2 lg:[&>li:nth-child(even)]:translate-y-16 xl:gap-x-8">
           {speakers.map((s, i) => {
             const d = (i % 4) * 80;
             return (
