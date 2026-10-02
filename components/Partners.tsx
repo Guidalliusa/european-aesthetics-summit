@@ -12,7 +12,7 @@ export default function Partners() {
         <ul
           data-reveal="stagger"
           style={{ ["--step" as string]: "91ms", ["--d" as string]: "75ms" }}
-          className="mt-10 grid grid-cols-2 items-center justify-items-center gap-x-8 gap-y-10 [&>li:last-child:nth-child(odd)]:col-span-2 sm:flex sm:flex-wrap sm:justify-center sm:gap-x-14 md:mt-12 lg:gap-x-20"
+          className="mt-10 grid grid-cols-2 items-center justify-items-center gap-x-8 gap-y-10 [&>li:last-child:nth-child(odd)]:col-span-2 sm:flex sm:flex-wrap sm:justify-center sm:gap-x-12 md:mt-12 lg:gap-x-14"
         >
           {partners.map((p, i) => (
             <li key={p.name} style={{ ["--i" as string]: i }} className="flex min-h-20 flex-col items-center justify-center gap-2">
@@ -26,7 +26,7 @@ export default function Partners() {
                   height={p.logoHeight}
                   loading="lazy"
                   decoding="async"
-                  className={`${p.caption ? "h-11 md:h-14" : "h-16 md:h-20"} w-auto max-w-[170px] object-contain opacity-85 transition-[opacity,translate] duration-500 ease-[var(--ease-out-soft)] hover:-translate-y-1 hover:opacity-100 md:max-w-[200px]`}
+                  className={`${p.caption ? "h-11 md:h-14" : p.tall ? "h-20 md:h-24" : "h-16 md:h-20"} w-auto max-w-[150px] object-contain opacity-85 transition-[opacity,translate] duration-500 ease-[var(--ease-out-soft)] hover:-translate-y-1 hover:opacity-100 md:max-w-[170px]`}
                 />
               ) : null}
               {p.caption && (

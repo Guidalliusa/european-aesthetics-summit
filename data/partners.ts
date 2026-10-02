@@ -15,21 +15,19 @@ export type Partner = {
   url?: string;
   /** Nome por baixo do símbolo, quando o ficheiro só traz o monograma. */
   caption?: string;
+  /** Logótipo vertical (símbolo + texto empilhado): precisa de mais altura para pesar o mesmo. */
+  tall?: boolean;
 };
 
 export const partners: Partner[] = [
   { name: "BeLux Clinic", logo: "/logos/belux-clinic.png", logoWidth: 367, logoHeight: 314 },
   { name: "LifeWave", logo: "/logos/lifewave.png", logoWidth: 468, logoHeight: 161 },
   { name: "Guidalli International Academy", logo: "/logos/guidalli-international-academy.png", logoWidth: 538, logoHeight: 310 },
-  // Só existia um recorte pequeno e truncado do cartaz: usa-se o monograma "Be" e o nome em texto.
-  // Com o ficheiro oficial, trocar o logo e remover a legenda.
-  {
-    name: "The BE System Global",
-    logo: "/logos/be-system-global.png",
-    logoWidth: 329,
-    logoHeight: 225,
-    caption: "The BE System · Global",
-  },
+  // Ficheiro oficial: fundo preto removido; o cinzento-chumbo foi aclarado para ler sobre o preto.
+  { name: "The BE System Global", logo: "/logos/be-system-global.png", logoWidth: 700, logoHeight: 472 },
+  { name: "Belinha Cardoso", logo: "/logos/belinha-cardoso.png", logoWidth: 494, logoHeight: 700, tall: true },
+  // Original em PDF (cinzento-claro + texto preto): forma mantida, tudo a marfim.
+  { name: "MF Profissional", logo: "/logos/mf-profissional.png", logoWidth: 597, logoHeight: 700, tall: true },
   // Romã nas cores originais; só o texto (preto no original) passa a marfim para ler sobre o fundo escuro.
   { name: "Grupo Cado", logo: "/logos/grupo-cado.png", logoWidth: 700, logoHeight: 414 },
 ];
