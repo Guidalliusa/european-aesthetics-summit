@@ -4,47 +4,42 @@ import { Words } from "./motion";
 export default function Topics() {
   return (
     <section id="temas" aria-labelledby="temas-title" className="on-light section-y bg-ivory text-ink">
-      <div className="shell grid gap-14 lg:grid-cols-12 lg:gap-8">
-        <div className="lg:col-span-4">
-          <div className="lg:sticky lg:top-32">
-            <p data-reveal className="eyebrow flex items-center gap-4 text-bronze-deep">
-              Temas
-            </p>
-            <h2 id="temas-title" className="mt-8 font-display text-[clamp(2.1rem,4vw,3.5rem)] font-light leading-[1.08]">
-              <Words delay={75} segments={["Diferentes perspetivas. ", ["Um mesmo futuro.", "italic text-bronze-deep"]]} />
-            </h2>
-            <p data-reveal style={{ ["--d" as string]: "300ms" }} className="mt-8 max-w-xs text-[1.0625rem] font-normal leading-relaxed text-stone">
-              Dez eixos que atravessam o programa, da prática profissional à carreira internacional.
-            </p>
-          </div>
+      <div className="shell">
+        {/* Cabeçalho centrado: formato diferente do Programa (que tem o título fixo à esquerda) */}
+        <div className="mx-auto max-w-3xl text-center">
+          <p data-reveal className="eyebrow text-bronze-deep">
+            Temas
+          </p>
+          <h2 id="temas-title" className="mt-8 font-display text-[clamp(2.1rem,4.6vw,3.9rem)] font-light leading-[1.08]">
+            <Words delay={75} segments={["Diferentes perspetivas. ", ["Um mesmo futuro.", "italic text-bronze-deep"]]} />
+          </h2>
+          <p data-reveal style={{ ["--d" as string]: "300ms" }} className="mx-auto mt-8 max-w-md text-[1.0625rem] font-normal leading-relaxed text-stone">
+            Dez eixos que atravessam o programa, da prática profissional à carreira internacional.
+          </p>
         </div>
 
-        {/* Cada linha entra quando chega ao ecrã: o scroll dita o ritmo, uma de cada vez */}
-        <ol className="lg:col-span-7 lg:col-start-6">
+        {/* Grelha de 10 blocos com filetes: 2 colunas no telemóvel e tablet, 5 no desktop */}
+        <ol
+          data-reveal="stagger"
+          style={{ ["--step" as string]: "70ms", ["--d" as string]: "100ms" }}
+          className="mt-14 grid grid-cols-2 border-l border-t border-bronze/30 md:mt-20 lg:grid-cols-5"
+        >
           {topics.map((t, i) => (
-            <li key={t} className="group relative cursor-default">
-              <div data-reveal="line" className="h-px w-full bg-bronze/35" />
-              <div
-                data-reveal
-                style={{ ["--d" as string]: "60ms" }}
-                className="relative flex items-baseline gap-6 py-7 md:gap-10 md:py-9"
-              >
-                <span className="w-8 shrink-0 text-[0.8125rem] font-semibold tabular-nums tracking-[0.12em] md:w-10 md:text-[0.875rem] text-bronze-deep">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span className="flex-1 font-display text-[1.3125rem] font-light leading-[1.25] tracking-[-0.01em] text-ink transition-transform duration-700 ease-[var(--ease-out-soft)] group-hover:translate-x-3 md:text-[clamp(1.5rem,1.9vw,1.875rem)]">
-                  {t}
-                </span>
-                <span
-                  aria-hidden="true"
-                  className="hidden h-2 w-2 shrink-0 self-center rounded-full bg-bronze-deep opacity-0 transition-all duration-500 ease-[var(--ease-out-soft)] group-hover:scale-100 group-hover:opacity-100 md:block md:scale-0"
-                />
-              </div>
+            <li
+              key={t}
+              style={{ ["--i" as string]: i }}
+              className="group relative flex min-h-[8.5rem] flex-col justify-between gap-5 border-b border-r border-bronze/30 p-4 sm:min-h-[10rem] sm:p-6 transition-colors duration-500 hover:bg-ivory-2 lg:min-h-[13rem] lg:p-7"
+            >
+              <span className="font-display text-[2rem] font-light leading-none tracking-[-0.04em] sm:text-[2.5rem] text-bronze-deep transition-transform duration-700 ease-[var(--ease-out-soft)] group-hover:-translate-y-1 lg:text-[2.75rem]">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <span className="text-[0.9375rem] font-normal leading-snug text-ink sm:text-[1.0625rem]">{t}</span>
+              <span
+                aria-hidden="true"
+                className="absolute inset-x-0 bottom-0 h-[2px] origin-left scale-x-0 bg-bronze-deep transition-transform duration-700 ease-[var(--ease-out-soft)] group-hover:scale-x-100"
+              />
             </li>
           ))}
-          <li aria-hidden="true">
-            <div data-reveal="line" className="h-px w-full bg-bronze/35" />
-          </li>
         </ol>
       </div>
     </section>
