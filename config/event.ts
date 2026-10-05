@@ -21,10 +21,10 @@ export const GRUPO_CADO_URL = "https://www.instagram.com/ogrupocado/";
 
 /**
  * Endereço público do site (SEO, Open Graph, canonical), sempre com "/" no fim.
- * Hoje: GitHub Pages em siqueirawhelisson-design/european-aesthetics-summit.
+ * Hoje: GitHub Pages em Guidalliusa/european-aesthetics-summit.
  * Com domínio próprio, trocar aqui e deixar NEXT_PUBLIC_BASE_PATH vazio no build.
  */
-export const SITE_URL = "https://siqueirawhelisson-design.github.io/european-aesthetics-summit/";
+export const SITE_URL = "https://guidalliusa.github.io/european-aesthetics-summit/";
 
 /** URL absoluto de um ficheiro do site (ex.: siteUrl("og.jpg")). */
 export const siteUrl = (path = "") => new URL(path, SITE_URL).href;
