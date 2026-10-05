@@ -60,7 +60,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color] duration-500 ${
         solid ? "border-b border-ivory/[0.07] bg-ink/80 backdrop-blur-md" : "border-b border-transparent"
       }`}
     >

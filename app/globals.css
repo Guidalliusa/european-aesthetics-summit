@@ -116,6 +116,7 @@ body::after {
   pointer-events: none;
   z-index: 60;
   opacity: 0.035;
+  transform: translateZ(0);
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 }
 
@@ -258,7 +259,6 @@ body::after {
    ========================================================= */
 .letters > [aria-hidden] > span {
   display: inline-block;
-  will-change: transform;
 }
 
 @media (hover: hover) {
@@ -444,25 +444,24 @@ body::after {
 }
 
 /* ---------- Ticket: linha de luz a percorrer o topo ---------- */
+/* Anima só transform: corre na GPU sem repintar a página a cada quadro */
 .ticket-sheen {
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgb(214 176 106 / 0) 35%,
-    rgb(214 176 106 / 0.9) 50%,
-    rgb(214 176 106 / 0) 65%,
-    transparent 100%
-  );
-  background-size: 250% 100%;
+  overflow: hidden;
+}
+
+.ticket-sheen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 40%;
+  background: linear-gradient(90deg, transparent, rgb(214 176 106 / 0.9), transparent);
+  transform: translate3d(-100%, 0, 0);
   animation: sheen 6s linear infinite;
 }
 
 @keyframes sheen {
-  from {
-    background-position: 150% 0;
-  }
   to {
-    background-position: -100% 0;
+    transform: translate3d(350%, 0, 0);
   }
 }
 

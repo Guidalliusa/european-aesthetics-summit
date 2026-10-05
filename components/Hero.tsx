@@ -42,16 +42,19 @@ export default function Hero() {
       />
       {/* Raquel Guidalli em palco (foto real, só o fundo removido): entre o título e Lisboa */}
       <div
-        className="hero-figure-in hero-figure absolute right-[-8vw] top-[8svh] -z-10 aspect-[585/1131] h-[50svh] sm:right-[2vw] lg:bottom-0 lg:right-auto lg:top-[11svh] lg:h-auto lg:left-[max(50%,calc((100%-1320px)/2+720px))]"
+        className="hero-figure-in absolute right-[-8vw] top-[8svh] -z-10 aspect-[585/1131] h-[50svh] sm:right-[2vw] lg:bottom-0 lg:right-auto lg:top-[11svh] lg:h-auto lg:left-[max(50%,calc((100%-1320px)/2+720px))]"
       >
-        <Img
-          name="raquel-palco"
-          alt="Raquel Guidalli, fundadora e organizadora, em palco com microfone"
-          fill
-          preload
-          sizes="(min-width: 1024px) 420px, 60vw"
-          className="object-contain object-top"
-        />
+        {/* Filtro e máscara no filho: a animação do invólucro só move uma camada já pintada */}
+        <div className="hero-figure absolute inset-0">
+          <Img
+            name="raquel-palco"
+            alt="Raquel Guidalli, fundadora e organizadora, em palco com microfone"
+            fill
+            preload
+            sizes="(min-width: 1024px) 420px, 60vw"
+            className="object-contain object-top"
+          />
+        </div>
       </div>
       <div aria-hidden="true" className="absolute inset-x-0 bottom-0 -z-10 h-[46svh] bg-gradient-to-t from-ink via-ink/85 to-transparent lg:h-40 lg:via-ink/40" />
 
