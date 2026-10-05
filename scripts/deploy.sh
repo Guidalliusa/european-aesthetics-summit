@@ -3,11 +3,13 @@
 # Uso, na raiz do projeto:  bash scripts/deploy.sh
 set -euo pipefail
 
-BASE=/european-aesthetics-summit
+# Domínio próprio: o site vive na raiz, sem basePath.
+DOMAIN=europeansummit.site
 REMOTE=$(git remote get-url origin)
 
-MSYS_NO_PATHCONV=1 NEXT_PUBLIC_BASE_PATH=$BASE npm run build
+npm run build
 touch out/.nojekyll
+echo "$DOMAIN" > out/CNAME
 
 TMP=$(mktemp -d)
 cp -r out/. "$TMP"

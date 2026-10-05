@@ -21,10 +21,10 @@ export const GRUPO_CADO_URL = "https://www.instagram.com/ogrupocado/";
 
 /**
  * Endereço público do site (SEO, Open Graph, canonical), sempre com "/" no fim.
- * Hoje: GitHub Pages em Guidalliusa/european-aesthetics-summit.
- * Com domínio próprio, trocar aqui e deixar NEXT_PUBLIC_BASE_PATH vazio no build.
+ * Hoje: domínio europeansummit.site (DNS na Hostinger) a servir o GitHub Pages de Guidalliusa/european-aesthetics-summit.
+ * Na raiz do domínio, por isso o build não usa NEXT_PUBLIC_BASE_PATH (ver scripts/deploy.sh).
  */
-export const SITE_URL = "https://guidalliusa.github.io/european-aesthetics-summit/";
+export const SITE_URL = "https://europeansummit.site/";
 
 /** URL absoluto de um ficheiro do site (ex.: siteUrl("og.jpg")). */
 export const siteUrl = (path = "") => new URL(path, SITE_URL).href;
