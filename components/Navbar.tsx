@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { TICKET_URL } from "@/config/event";
+import { EVENT_DATE, EVENT_LOCATION, EVENT_TIME, TICKET_URL } from "@/config/event";
 import { TicketLink } from "./ui";
 import { Roll } from "./motion";
 
@@ -128,7 +128,7 @@ export default function Navbar() {
             ))}
           </ul>
           <div className="space-y-4">
-            <p className="text-sm text-muted">15 Novembro 2026 · 14:00 às 20:00 · Lisboa</p>
+            <p className="text-sm text-muted">{EVENT_DATE.day} {EVENT_DATE.month} {EVENT_DATE.year} · {EVENT_TIME.label} · {EVENT_LOCATION.city}</p>
             <a
               href={TICKET_URL}
               target="_blank"

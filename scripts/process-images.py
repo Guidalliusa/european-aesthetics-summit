@@ -111,7 +111,7 @@ save("helena-venceslau", on_backdrop(hel, (70, 20, 1090, 1295), (0.5, 0.25)), [4
 # Patricia: foto do cartaz individual (57), recortada (isnet) e posta no fundo escuro dos outros recortes
 pat = Image.open(os.path.join(CUT, "57_patricia_isnet.png")).convert("RGBA")
 save("patricia-benitto", on_backdrop(pat, (15, 10, 485, 597), (0.55, 0.3)), [470])
-save("gustavo-galves", crop45(src(25), (295, 180, 775, 780)), [480])
+save("gustavo-galves", crop45(src(25), (220, 60, 800, 785)), [480, 580])
 save("danny-gomes", src(19).crop((50, 0, 1055, 1005)), [240, 480])
 
 # ---------- Hero: Raquel em palco (foto original enviada, 52; o alfa de origem tem manchas

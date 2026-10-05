@@ -42,11 +42,11 @@ export const EVENT_DATE = {
 };
 
 export const EVENT_TIME = {
-  start: "14:00",
+  start: "13:30",
   end: "20:00",
-  label: "14:00 às 20:00",
+  label: "13:30 às 20:00",
   /** Lisboa em novembro está em WET (UTC+0). */
-  startISO: "2026-11-15T14:00:00+00:00",
+  startISO: "2026-11-15T13:30:00+00:00",
   endISO: "2026-11-15T20:00:00+00:00",
 };
 
