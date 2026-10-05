@@ -46,7 +46,7 @@ export const speakers: Speaker[] = [
     id: "teylon-castro",
     name: "Dr. Teylon Castro",
     role: "Orador",
-    topic: "Harmonização Cirúrgica Técnica: Lipoescultura Facial 5TC",
+    topic: "Harmonização Cirúrgica · Técnica: Lipoescultura Facial 5TC",
     image: "teylon-castro",
     bio: null,
   },
@@ -62,7 +62,8 @@ export const speakers: Speaker[] = [
     id: "john-feitosa",
     name: "Dr. John Feitosa",
     role: "Orador",
-    topic: null,
+    // Assim no cronograma oficial: o tema só é revelado no dia.
+    topic: "Surpresa",
     image: "john-feitosa",
     bio: null,
   },

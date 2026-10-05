@@ -8,6 +8,7 @@ import { Roll } from "./motion";
 const links = [
   { href: "#summit", label: "O Summit" },
   { href: "#oradores", label: "Oradores" },
+  { href: "#programa", label: "Programa" },
   { href: "#temas", label: "Temas" },
   { href: "#local", label: "Local" },
 ];

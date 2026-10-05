@@ -12,6 +12,7 @@ import Partners from "@/components/Partners";
 import Footer from "@/components/Footer";
 import StickyCTA from "@/components/StickyCTA";
 import RevealObserver from "@/components/RevealObserver";
+import Programme from "@/components/Programme";
 import {
   EVENT_ADDRESS,
   EVENT_LOCATION,
@@ -71,6 +72,7 @@ export default function Home() {
         <Manifesto />
         <FeaturedOrganizer />
         <Speakers />
+        <Programme />
         <Topics />
         <SpecialPanel />
         <Certification />
