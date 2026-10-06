@@ -56,7 +56,8 @@ export default function Hero() {
           />
         </div>
       </div>
-      <div aria-hidden="true" className="absolute inset-x-0 bottom-0 -z-10 h-[46svh] bg-gradient-to-t from-ink via-ink/85 to-transparent lg:h-40 lg:via-ink/40" />
+      {/* Base a fundir no preto, por cima da Raquel e de Lisboa (a figura fica sólida, sem transparência) */}
+      <div aria-hidden="true" className="absolute inset-x-0 bottom-0 -z-10 h-[46svh] bg-gradient-to-t from-ink via-ink/85 to-transparent lg:h-[34svh] lg:via-ink/70 lg:via-45%" />
 
 
       {/* Curva dourada sob a foto */}
