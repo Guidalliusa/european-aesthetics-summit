@@ -114,12 +114,14 @@ save("patricia-benitto", on_backdrop(pat, (15, 10, 485, 597), (0.55, 0.3)), [470
 save("gustavo-galves", crop45(src(25), (220, 60, 800, 785)), [480, 580])
 save("danny-gomes", src(19).crop((50, 0, 1055, 1005)), [240, 480])
 
-# ---------- Hero: Raquel em palco (foto original enviada, 52; o alfa de origem tem manchas
-# cinzentas a ~120-150 e a pessoa a ~253: só se limpa a máscara, o rosto não é tocado) ----------
-palco = Image.open(os.path.join(CUT, "52_raquel_palco_hd.png")).convert("RGBA")
+# ---------- Hero: Raquel (foto 69, fato claro), recortada com scripts/cutout.py (IS-Net); rosto não é tocado ----------
+palco = Image.open(os.path.join(CUT, "69_raquel_branco_isnet.png")).convert("RGBA")
+# fundo original era branco: recolhe 2px da borda para não ficar halo claro sobre o céu escuro
+_a = palco.split()[3].filter(ImageFilter.MinFilter(5)).filter(ImageFilter.GaussianBlur(1.2))
+palco.putalpha(_a)
 palco = palco.crop(palco.getbbox())
 made = []
-for w in [480, palco.width]:
+for w in [520, 800, palco.width]:
     h = round(palco.height * w / palco.width)
     palco.resize((w, h), Image.LANCZOS).save(os.path.join(OUT, f"raquel-palco-{w}.webp"), "WEBP", quality=90, method=6)
     made.append(w)

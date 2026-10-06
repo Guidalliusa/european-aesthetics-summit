@@ -84,11 +84,12 @@
     ]
   },
   "raquel-palco": {
-    "width": 585,
-    "height": 1131,
+    "width": 866,
+    "height": 1079,
     "widths": [
-      480,
-      585
+      520,
+      800,
+      866
     ]
   },
   "cartaz-oficial": {

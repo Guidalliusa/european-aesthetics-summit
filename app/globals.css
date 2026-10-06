@@ -416,16 +416,16 @@ body::after {
 
 /* Raquel no hero: sombra de contacto, contorno quente do sol à esquerda, pernas a fundir no preto */
 .hero-figure {
-  filter: saturate(0.96) sepia(0.05) drop-shadow(-2px -1px 2px rgb(214 176 106 / 0.4))
-    drop-shadow(0 24px 48px rgb(0 0 0 / 0.6));
+  /* luz de estúdio branca -> tom quente do pôr do sol (só cor global, sem retoque) */
+  filter: brightness(0.88) contrast(1.04) saturate(0.95) sepia(0.14) drop-shadow(0 24px 48px rgb(0 0 0 / 0.6));
   -webkit-mask-image: linear-gradient(to bottom, #000 34%, transparent 78%);
   mask-image: linear-gradient(to bottom, #000 34%, transparent 78%);
 }
 
 @media (min-width: 1024px) {
   .hero-figure {
-    -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
-    mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 66%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 66%, transparent 100%);
   }
 }
 

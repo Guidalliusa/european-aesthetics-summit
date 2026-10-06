@@ -40,18 +40,18 @@ export default function Hero() {
         aria-hidden="true"
         className="hero-glow-in absolute top-[4svh] -z-10 hidden h-[60svh] w-[46rem] -translate-x-1/4 rounded-full bg-[radial-gradient(closest-side,rgb(214_176_106/0.16),transparent)] lg:left-[max(50%,calc((100%-1320px)/2+720px))] lg:block"
       />
-      {/* Raquel Guidalli em palco (foto real, só o fundo removido): entre o título e Lisboa */}
+      {/* Raquel Guidalli (foto real, só o fundo removido): entre o título e Lisboa */}
       <div
-        className="hero-figure-in absolute right-[-8vw] top-[8svh] -z-10 aspect-[585/1131] h-[50svh] sm:right-[2vw] lg:bottom-0 lg:right-auto lg:top-[11svh] lg:h-auto lg:left-[max(50%,calc((100%-1320px)/2+720px))]"
+        className="hero-figure-in absolute right-[-10vw] top-[9svh] -z-10 aspect-[868/1080] h-[44svh] sm:right-0 lg:bottom-0 lg:right-auto lg:top-[16svh] lg:h-auto lg:left-[max(52%,calc((100%-1320px)/2+760px))]"
       >
         {/* Filtro e máscara no filho: a animação do invólucro só move uma camada já pintada */}
         <div className="hero-figure absolute inset-0">
           <Img
             name="raquel-palco"
-            alt="Raquel Guidalli, fundadora e organizadora, em palco com microfone"
+            alt="Raquel Guidalli, fundadora e organizadora do summit"
             fill
             preload
-            sizes="(min-width: 1024px) 420px, 60vw"
+            sizes="(min-width: 1024px) 720px, 80vw"
             className="object-contain object-top"
           />
         </div>
