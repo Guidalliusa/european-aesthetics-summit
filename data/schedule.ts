@@ -32,7 +32,7 @@ export const schedule: Slot[] = [
   { start: "15:55", end: "16:25", speaker: by("maria-celeste-barreto"), kind: "talk" },
   { start: "16:30", end: "17:00", title: "Coffee break e networking", kind: "break" },
   { start: "17:00", end: "17:30", title: "Painel profissional", kind: "moment" },
-  { start: "17:30", end: "18:00", speaker: by("john-feitosa"), kind: "talk" },
+  { start: "17:30", end: "18:00", speaker: by("mayara-marinov"), kind: "talk" },
   { start: "18:05", end: "18:35", speaker: by("patricia-benitto"), kind: "talk" },
   { start: "18:35", end: "19:05", speaker: by("teylon-castro"), kind: "talk" },
   { start: "19:05", end: "19:30", speaker: organizer, kind: "talk" },

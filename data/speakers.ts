@@ -59,12 +59,12 @@ export const speakers: Speaker[] = [
     bio: null,
   },
   {
-    id: "john-feitosa",
-    name: "Dr. John Feitosa",
-    role: "Orador",
-    // Assim no cronograma oficial: o tema só é revelado no dia.
-    topic: "Surpresa",
-    image: "john-feitosa",
+    id: "mayara-marinov",
+    name: "Mayara Marinov",
+    role: "Oradora",
+    // Entrou no lugar do Dr. John Feitosa; tema ainda não confirmado.
+    topic: null,
+    image: "mayara-marinov",
     bio: null,
   },
   {

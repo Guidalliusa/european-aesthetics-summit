@@ -4,7 +4,7 @@ Gera as imagens otimizadas (WebP em várias larguras) em public/images e o manif
 Uso (na raiz do projeto):  python scripts/process-images.py public/images
 
 Fontes em assets-src/:
-  fotos/     originais enviados (ipdj-auditorio.webp = auditório IPDJ, 16 = John Feitosa, 17 = Teylon Castro,
+  fotos/     originais enviados (ipdj-auditorio.webp = auditório IPDJ, 71 = Mayara Marinov, 17 = Teylon Castro,
              19 = Danny Gomes, 20 = Belinha Cardoso, 22 = Maria Celeste Barreto,
              25 = Gustavo Galves)
   recortes/  fundos removidos com rembg (18 = Raquel Guidalli, 21 = Helena Venceslau)
@@ -102,10 +102,7 @@ save("belinha-cardoso", crop45(src(20), (0, 90, 1023, 1369)), [480, 800])
 save("maria-celeste-barreto", crop45(src(22), (0, 70, 1023, 1349)), [480, 800])
 save("teylon-castro", crop45(src(17), (0, 40, 1024, 1320)), [480, 800])
 
-john = src(16)
-pad = Image.new("RGB", (794, 1060), john.getpixel((20, 20)))
-pad.paste(john, (0, 60))
-save("john-feitosa", pad.crop((0, 0, 794, 992)), [480, 794])
+save("mayara-marinov", crop45(src(71), (0, 70, 1066, 1402)), [480, 800])
 
 save("helena-venceslau", on_backdrop(hel, (70, 20, 1090, 1295), (0.5, 0.25)), [480, 800])
 # Patricia: foto do cartaz individual (57), recortada (isnet) e posta no fundo escuro dos outros recortes
