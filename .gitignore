@@ -43,3 +43,6 @@ next-env.d.ts
 # originais das fotos e logótipos (ficam só no computador; o site usa public/)
 /assets-src/
 tsconfig.tsbuildinfo
+
+# caches locais de ferramentas (têm caminhos e IDs desta máquina)
+/.impeccable/

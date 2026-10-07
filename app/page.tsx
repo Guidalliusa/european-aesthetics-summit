@@ -83,7 +83,7 @@ export default function Home() {
       <Footer />
       <StickyCTA />
       <RevealObserver />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema).replace(/</g, "\\u003c") }} />
     </>
   );
 }

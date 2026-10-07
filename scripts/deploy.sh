@@ -8,6 +8,18 @@ DOMAIN=europeansummit.site
 REMOTE=$(git remote get-url origin)
 
 npm run build
+
+# Fail securely: nada de segredos, chaves, source maps ou originais no que vai ser público
+LEAK=$(find out \( -name ".env*" -o -name "*.map" -o -name "*.pem" -o -name "*.key" -o -path "*assets-src*" \) -print)
+if [ -n "$LEAK" ]; then
+  echo "Deploy cancelado: ficheiros que não devem ser publicados em out/:" >&2
+  echo "$LEAK" >&2
+  exit 1
+fi
+
+# CSP com hashes dos scripts inline (o GitHub Pages não permite cabeçalhos HTTP)
+python scripts/csp.py out
+
 touch out/.nojekyll
 echo "$DOMAIN" > out/CNAME
 
