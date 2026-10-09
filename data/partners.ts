@@ -30,4 +30,8 @@ export const partners: Partner[] = [
   { name: "MF Profissional", logo: "/logos/mf-profissional.png", logoWidth: 597, logoHeight: 700, tall: true },
   // Romã nas cores originais; só o texto (preto no original) passa a marfim para ler sobre o fundo escuro.
   { name: "Grupo Cado", logo: "/logos/grupo-cado.png", logoWidth: 700, logoHeight: 414 },
+  // Selo dourado recortado do quadrado turquesa (fundo transparente); cores originais.
+  { name: "JD Lashes", logo: "/logos/jd-lashes.png", logoWidth: 368, logoHeight: 368, tall: true },
+  // Original preto sobre branco: texto passa a marfim, fundo transparente.
+  { name: "Tyrrel Professional", logo: "/logos/tyrrel-professional.png", logoWidth: 700, logoHeight: 206 },
 ];
